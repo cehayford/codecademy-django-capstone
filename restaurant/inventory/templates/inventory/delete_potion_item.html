@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+<h2>Delete Ye Magic Potion / Elixir</h2>
+<form method="post">
+    <div>
+      {% csrf_token %}
+      <p>Are you sure you want to delete "{{ object }}"?</p>
+      <input type="submit" value="Confirm" />
+    </div>
+</form>
+{% endblock %}
